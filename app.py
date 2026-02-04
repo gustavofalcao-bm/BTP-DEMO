@@ -44,6 +44,15 @@ def set_theme():
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
+        /* ========================================== */
+        /* ZOOM 75% GLOBAL (NO INÍCIO) */
+        /* ========================================== */
+        html {
+            zoom: 0.75;
+            -moz-transform: scale(0.75);
+            -moz-transform-origin: 0 0;
+        }
+
         :root {
             --btp-green: #0B5B3E;
             --btp-green-dark: #084932;
@@ -76,12 +85,12 @@ def set_theme():
         .block-container {
             padding-top: 5rem !important;
             padding-bottom: 3rem;
-            max-width: 1600px;
+            max-width: 2133px !important;  /* Ajustado para zoom 75% */
         }
 
         /* SIDEBAR PREMIUM */
         section[data-testid="stSidebar"] {
-            width: 300px !important;
+            width: 400px !important;  /* Ajustado para zoom 75% */
             background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%) !important;
             border-right: 1px solid var(--btp-border);
             box-shadow: 4px 0 20px rgba(0,0,0,0.04);
@@ -373,7 +382,6 @@ def set_theme():
 
         /* HERO BANNER */
         .hero-banner {
-                
             display: flex;
             flex-direction: column;
             align-items: center;    
@@ -504,23 +512,8 @@ def set_theme():
             box-shadow: var(--btp-shadow-md);
         }
         </style>
-        html {
-            zoom: 0.75;
-            -moz-transform: scale(0.75);
-            -moz-transform-origin: 0 0;
-        }
-        
-        /* Ajustar largura do container para compensar o zoom */
-        .block-container {
-            max-width: 2133px !important;  /* 1600px / 0.75 = 2133px */
-        }
-        
-        /* Ajustar sidebar */
-        section[data-testid="stSidebar"] {
-            width: 400px !important;  /* 300px / 0.75 = 400px */
-        }
-        </style>
     ''', unsafe_allow_html=True)
+
 
 def init_session_state():
     defaults = {
