@@ -44,11 +44,6 @@ def set_theme():
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
-        html {
-            zoom: 0.75;
-            -moz-transform: scale(0.75);
-            -moz-transform-origin: 0 0;
-        }
         :root {
             --btp-green: #0B5B3E;
             --btp-green-dark: #084932;
