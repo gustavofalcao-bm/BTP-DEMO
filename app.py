@@ -504,6 +504,22 @@ def set_theme():
             box-shadow: var(--btp-shadow-md);
         }
         </style>
+        html {
+            zoom: 0.75;
+            -moz-transform: scale(0.75);
+            -moz-transform-origin: 0 0;
+        }
+        
+        /* Ajustar largura do container para compensar o zoom */
+        .block-container {
+            max-width: 2133px !important;  /* 1600px / 0.75 = 2133px */
+        }
+        
+        /* Ajustar sidebar */
+        section[data-testid="stSidebar"] {
+            width: 400px !important;  /* 300px / 0.75 = 400px */
+        }
+        </style>
     ''', unsafe_allow_html=True)
 
 def init_session_state():
