@@ -1,39 +1,26 @@
 # .streamlit/config.toml
-# Configurações do BOMTEMPO v7.0 Premium
+# BOMTEMPO v7.0 Premium - Atualizado 2026
 
 [theme]
-# Cores BOMTEMPO
-primaryColor = "#0B5B3E"        # Verde BOMTEMPO
-backgroundColor = "#FFFFFF"      # Background BRANCO
-secondaryBackgroundColor = "#F9FAFB"  # Cinza claro para cards
-textColor = "#111827"            # Texto principal
-font = "sans serif"              # Fonte padrão (Montserrat vem do CSS)
+primaryColor = "#0B5B3E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F9FAFB"
+textColor = "#111827"
+font = "sans serif"
 
 [browser]
-# Configurações do navegador
-gatherUsageStats = false         # Não enviar estatísticas
-serverAddress = "localhost"
-serverPort = 8501
+gatherUsageStats = false
 
 [server]
-# Performance
-maxUploadSize = 200              # MB
-maxMessageSize = 200             # MB
+headless = true
+port = 8501
 enableCORS = false
 enableXsrfProtection = true
-headless = false
-
-[runner]
-# Otimizações
-magicEnabled = true
-fastReruns = true
 
 [client]
-# Comportamento do cliente
-showErrorDetails = true
-toolbarMode = "minimal"          # Barra de ferramentas minimalista
+toolbarMode = "minimal"
+showSidebarNavigation = true
 
-[ui]
-# Interface do usuário
-hideTopBar = false
-hideSidebarNav = false
+[runner]
+magicEnabled = true
+fastReruns = true
