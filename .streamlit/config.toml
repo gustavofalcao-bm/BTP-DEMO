@@ -16,6 +16,9 @@ headless = true
 port = 8501
 enableCORS = false
 enableXsrfProtection = true
+maxUploadSize = 50
+maxMessageSize = 50
+enableWebsocketCompression = true
 
 [client]
 toolbarMode = "minimal"
